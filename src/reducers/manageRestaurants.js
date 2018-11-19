@@ -1,16 +1,18 @@
-export default function manageRestaurants(state = {
-  restaurants: []
-}, action) {
+export default function manageRestaurants(
+  state = {
+    restaurants: []
+  },
+  action
+) {
   switch (action.type) {
-
-    case 'ADD_RESTAURANT':
+    case "ADD_RESTAURANT":
+      // console.log("Here in the reducer", state, action);
       return {
         ...state,
         restaurants: [...state.restaurants, action.restaurant]
-      }
+      };
 
     default:
       return state;
-
   }
-};
+}
